@@ -19,5 +19,11 @@
     "intro"
   ],
   "author": "fer@ironhack.com",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "superheroes": "^3.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^10.1.0"
+  }
 }
