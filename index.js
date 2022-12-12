@@ -1,10 +1,10 @@
 class SortedList {
       // The constructor initializes the properties "items" and "length".
   constructor() {
-    this.items = [];
     this.length = 0;
+    this.items = [];
+    
   }
-  //we add a new element to the list and keep it sorted in ascending order
   add(item) {
 // Find the correct position to insert the new item in the list.
     let i = 0;
@@ -13,13 +13,13 @@ class SortedList {
     }
     // we add the new item to the list at the position found
     this.items.splice(i, 0, item);
-    // Actualiza la propiedad "length"
+    // Update the property  "length"
     this.length++;
 }
 
 
   get(pos) {
-      // Verifica si la posición es válida
+  
     if (!this.items.includes(pos)) {
       return OutOfBounds;// Returns a specific value if the position is not valid
     }
@@ -30,10 +30,10 @@ class SortedList {
   max() {
     if (this.items.length == 0) {
       return EmptySortedList;
-    } else {
+    } 
       return Math.max(...this.items);
     }
-  }
+  
 
   min() {
     if (this.items.length == 0) {
@@ -51,10 +51,9 @@ class SortedList {
     if (this.items.length == 0) { //If the list is empty, return an "EmptySortedList"
       return EmptySortedList;
     }
-let sum = 0;
-let average = undefined;
+    let sum = 0;
     this.items.forEach((num) => { sum += num });
-      return average = sum / this.items.length; 
+      return this.sum() / this.length
   }
 }
 module.exports = SortedList;
